@@ -11,6 +11,17 @@ flags = {
 
 class AbsApp(Application):
 
+    name = 'AbsApp'
+    description = """
+    AbsApp prints the absolute path for a provided file.
+
+    AbsApp has the flag `--size`. When this flag is used, the file size in bytes will be printed
+
+    Example:
+
+    COMMAND: python CLIapp.py abs
+    """
+
     flags = flags
     size = Bool(config=True)
 
@@ -22,7 +33,7 @@ class AbsApp(Application):
             raise ValueError('The provided path does not point to a valid file.')
 
         print(os.path.abspath(file))
-        
+
         if self.size:
             print('File size:', os.path.getsize(file), "bytes")
 

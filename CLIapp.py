@@ -9,18 +9,20 @@ class CLIapp(Application):
     name = 'cli'
 
     subcommands = dict(
-        greet=(GreetingApp,
+
+    greet=(
+        GreetingApp,
         dedent("""
         Prints a greeting!  
         """).strip()
-    ),
+        ),
     abs=(
         AbsApp,
         dedent("""
         Print the current working directory.
-        """)
-
-    ))
+        """.strip())
+        ), # New commands are added here
+    )
 
     def start(self) -> None:
         # check: is there a subapp given?
