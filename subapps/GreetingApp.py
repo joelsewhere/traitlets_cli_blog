@@ -1,3 +1,15 @@
+'''
+NOTE:
+      In the blog post, the lines of this code document are explained 
+      out of order. The goal of the blog is to describe the process of building
+      an Application class which usually involves writing the start
+      method and configurable variables first before writing the name and
+      description variables that appear in a earlier lines.
+
+      If a step that has not yet been mentioned in the blog, skip it 
+      and find the comment that matches what is being described.
+'''
+
 # 1) Imports
 # Your code here
 
