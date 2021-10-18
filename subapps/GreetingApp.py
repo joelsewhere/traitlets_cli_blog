@@ -1,42 +1,28 @@
-from traitlets.config import Application
-from traitlets import Unicode
+# 1) Imports
+# Your code here
 
-aliases = {
-    "greeting": "GreetingApp.greeting",
-    "name": "GreetingApp.name",
-    "punctuation": "GreetingApp.punctuation"
-}
+# 2) Aliases
+# Your code here
 
-class GreetingApp(Application):
+# 3) Define the GreetingApp
+# Your code here
 
-    # Traitlets specific variables
-    # `name` and `description` can be used to autogenerate documentation
-    name = "GreetingApp"
-    description = """
-    This app prints "Hello, World!" when activated.
+    # 4) Define the name class attribute
+    # Your code here
 
-    This app has the configuration arguments `--greeting`, `--name`, and `--punctuation.
-    These arguments allow you to change the printed sentence.
+    # 5) Define the description attribute
+    # Your code here
 
-    Example:
+    # 6) Define the app aliases
+    # Your code here
 
-    COMMAND: python CLIApp.py greet --greeting=Hi there
-    OUTPUT: "Hi there, World!"
-    """
+    # 7) Define the configurable variables
+    # Your code here
 
-    # `alias` allows you to easily map command line arguments
-    # to the configuration settings of the actual code.
-    aliases = aliases
+    # 8) Define the start method
+    # Your code here
+        # 9) Activate the `Application.start` method to parse the command line
+        # Your code here
 
-    # GreetingApp variables
-    greeting = Unicode("Hello").tag(config=True)
-    name = Unicode("World").tag(config=True)
-    punctuation = Unicode("!").tag(config=True)
-
-    def start(self):
-        # Activate the `Application.start` method to parse
-        # the command line
-        super(GreetingApp, self).start()
-
-        # Run GreetingApp code
-        print(self.greeting + ", " + self.name + self.punctuation)
+        # 10) Print the greeting
+        # Your code here

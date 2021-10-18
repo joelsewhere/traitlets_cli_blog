@@ -1,41 +1,41 @@
-from traitlets.config import Application
-from traitlets import Bool, observe, Unicode
-import os, sys
+# 1) Imports
+# Your code here
 
-flags = {
-    'size': (
-        {'AbsApp' : {'size' : True}},
-        "Print the file size for a file.."
-    ),
-}
+# 2) Flags
+# Your code here
 
-class AbsApp(Application):
+# 3) Define the `AbsApp` class
+# Your code here
 
-    name = 'AbsApp'
-    description = """
-    AbsApp prints the absolute path for a provided file.
+    # 4) Define the `name` class attribute
+    # Your code here
 
-    AbsApp has the flag `--size`. When this flag is used, the file size in bytes will be printed
+    # 5) Define the `description` class attribute
+    # Your code here
 
-    Example:
+    # 6) Define the application flags
+    # Your code here
 
-    COMMAND: python CLIapp.py abs
-    """
+    # 7) Define the configurable variable
+    # Your code here
 
-    flags = flags
-    size = Bool(config=True)
+    # 8) Define the `start` method
+    # Your code here
 
-    def start(self):
-        super(AbsApp, self).start()
+        # 9) Activate the parent class's `start` method
+        # Your code here
 
-        file = self.extra_args[0]
-        if not os.path.isfile(file):
-            raise ValueError('The provided path does not point to a valid file.')
+        # 10) Collect the filename with the `extra_arg` attribute
+        # Your code here
 
-        print(os.path.abspath(file))
+        # 11) Print the absolute path of the filename
+        # Your code here
 
-        if self.size:
-            print('File size:', os.path.getsize(file), "bytes")
+        # 12) Check if the size attribute is set to True
+        # Your code here
+
+            # 13) Print the filesize
+            # Your code here
 
         
 

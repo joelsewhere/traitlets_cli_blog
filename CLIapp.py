@@ -1,40 +1,34 @@
-from traitlets.config import Application
-from textwrap import dedent
-from subapps import (GreetingApp,
-                     AbsApp,
-                     )
+# 1) Imports
+# Your code here
 
-class CLIapp(Application):
+# 2) Define the `CLIApp` class
+# Your code here
 
-    name = 'cli'
+    # 3) Define the class attribute `name`
+    # Your code here
 
-    subcommands = dict(
+    # 4) Define the class attribute `subcommands`
+    # Your code here
 
-    greet=(
-        GreetingApp,
-        dedent("""
-        Prints a greeting!  
-        """).strip()
-        ),
-    abs=(
-        AbsApp,
-        dedent("""
-        Print the current working directory.
-        """.strip())
-        ), # New commands are added here
-    )
 
-    def start(self) -> None:
-        # check: is there a subapp given?
-        if self.subapp is None:
+    # 5) Define the `start` method
+    # Your code here
+
+        # 6) Check is subapp commmand was used
+        # Your code here
+
             print("No command given (run with --help for options). List of subcommands:\n")
-            self.print_subcommands()
+            # 7) Print the available subcommands
+            # Your code here
 
-        # This starts subapps
-        super(CLIapp, self).start()
+        # 8) Start the subapplication
+        # Your code here
 
-def main():
-    CLIapp.launch_instance()
+# 9) Define a main function
+# Your code here
+
+    # 10) Launch an instance of the `CLIapp`
+    # Your code here
 
 if __name__ == '__main__':
     main()
