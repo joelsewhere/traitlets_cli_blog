@@ -33,8 +33,6 @@ NOTE:
 
     # 8) Define the start method
     # Your code here
-        # 9) Activate the `Application.start` method to parse the command line
-        # Your code here
 
-        # 10) Print the greeting
+        # 9) Print the greeting
         # Your code here
