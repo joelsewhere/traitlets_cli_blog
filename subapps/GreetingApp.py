@@ -7,6 +7,10 @@ aliases = {
     "punctuation": "GreetingApp.punctuation"
 }
 
+"""
+FLAG: The name of this class does not align the the name
+      of the class in the blog.
+"""
 class GreetingApp(Application):
 
     # Traitlets specific variables
@@ -36,7 +40,7 @@ class GreetingApp(Application):
     def start(self):
         # Activate the `Application.start` method to parse
         # the command line
-        super(GreetingApp, self).start()
+        # super(GreetingApp, self).start()
 
         # Run GreetingApp code
         print(self.greeting + ", " + self.name + self.punctuation)

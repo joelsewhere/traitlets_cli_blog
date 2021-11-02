@@ -1,6 +1,6 @@
 from traitlets.config import Application
-from traitlets import Bool, observe, Unicode
-import os, sys
+from traitlets import Bool
+import os
 
 flags = {
     'size': (
@@ -26,11 +26,11 @@ class AbsApp(Application):
     size = Bool(config=True)
 
     def start(self):
-        super(AbsApp, self).start()
 
         file = self.extra_args[0]
         if not os.path.isfile(file):
-            raise ValueError('The provided path does not point to a valid file.')
+            raise ValueError('The provided path' 
+                             'does not point to a valid file.')
 
         print(os.path.abspath(file))
 

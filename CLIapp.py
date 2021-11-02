@@ -1,5 +1,4 @@
 from traitlets.config import Application
-from textwrap import dedent
 from subapps import (GreetingApp,
                      AbsApp,
                      )
@@ -12,15 +11,15 @@ class CLIapp(Application):
 
     greet=(
         GreetingApp,
-        dedent("""
+        """
         Prints a greeting!  
-        """).strip()
+        """.strip()
         ),
     abs=(
         AbsApp,
-        dedent("""
+        """
         Print the current working directory.
-        """.strip())
+        """
         ), # New commands are added here
     )
 
@@ -34,6 +33,8 @@ class CLIapp(Application):
         super(CLIapp, self).start()
 
 def main():
+    # This is where the command line is parsed
+    # https://github.com/ipython/traitlets/blob/f24879c16059b34b89c3fe5cb34cf72001fa9b18/traitlets/config/application.py#L839
     CLIapp.launch_instance()
 
 if __name__ == '__main__':
